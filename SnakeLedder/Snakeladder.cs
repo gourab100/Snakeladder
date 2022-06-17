@@ -14,6 +14,16 @@ namespace SnakeLedder
             int playerone;
             playerone = position;
             Console.WriteLine("playerone position " + playerone);
+            playerone = rolldice();
+            Console.WriteLine(" after rolling player1 position " + playerone);
+
+        }
+
+        public int rolldice()
+        {
+            Random random = new Random();
+            int dice = random.Next(1, 7);
+            return dice;
         }
 
     }
