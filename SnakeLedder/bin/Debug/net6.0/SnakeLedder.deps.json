@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v6.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v6.0": {
+      "SnakeLedder/1.0.0": {
+        "runtime": {
+          "SnakeLedder.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "SnakeLedder/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

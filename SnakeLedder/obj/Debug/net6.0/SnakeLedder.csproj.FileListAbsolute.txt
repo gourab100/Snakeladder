@@ -1,0 +1,15 @@
+C:\Users\User\Desktop\bridgelabz solutions\SnakeLedder\SnakeLedder\bin\Debug\net6.0\SnakeLedder.exe
+C:\Users\User\Desktop\bridgelabz solutions\SnakeLedder\SnakeLedder\bin\Debug\net6.0\SnakeLedder.deps.json
+C:\Users\User\Desktop\bridgelabz solutions\SnakeLedder\SnakeLedder\bin\Debug\net6.0\SnakeLedder.runtimeconfig.json
+C:\Users\User\Desktop\bridgelabz solutions\SnakeLedder\SnakeLedder\bin\Debug\net6.0\SnakeLedder.dll
+C:\Users\User\Desktop\bridgelabz solutions\SnakeLedder\SnakeLedder\bin\Debug\net6.0\SnakeLedder.pdb
+C:\Users\User\Desktop\bridgelabz solutions\SnakeLedder\SnakeLedder\obj\Debug\net6.0\SnakeLedder.csproj.AssemblyReference.cache
+C:\Users\User\Desktop\bridgelabz solutions\SnakeLedder\SnakeLedder\obj\Debug\net6.0\SnakeLedder.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\User\Desktop\bridgelabz solutions\SnakeLedder\SnakeLedder\obj\Debug\net6.0\SnakeLedder.AssemblyInfoInputs.cache
+C:\Users\User\Desktop\bridgelabz solutions\SnakeLedder\SnakeLedder\obj\Debug\net6.0\SnakeLedder.AssemblyInfo.cs
+C:\Users\User\Desktop\bridgelabz solutions\SnakeLedder\SnakeLedder\obj\Debug\net6.0\SnakeLedder.csproj.CoreCompileInputs.cache
+C:\Users\User\Desktop\bridgelabz solutions\SnakeLedder\SnakeLedder\obj\Debug\net6.0\SnakeLedder.dll
+C:\Users\User\Desktop\bridgelabz solutions\SnakeLedder\SnakeLedder\obj\Debug\net6.0\refint\SnakeLedder.dll
+C:\Users\User\Desktop\bridgelabz solutions\SnakeLedder\SnakeLedder\obj\Debug\net6.0\SnakeLedder.pdb
+C:\Users\User\Desktop\bridgelabz solutions\SnakeLedder\SnakeLedder\obj\Debug\net6.0\SnakeLedder.genruntimeconfig.cache
+C:\Users\User\Desktop\bridgelabz solutions\SnakeLedder\SnakeLedder\obj\Debug\net6.0\ref\SnakeLedder.dll
