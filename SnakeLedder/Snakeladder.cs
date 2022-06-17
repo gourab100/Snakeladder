@@ -11,41 +11,49 @@ namespace SnakeLedder
         public void Start()
         {
             int position;
-            int playerone;
-            playerone = 3;
+            int playerone = 3;
             Console.WriteLine("playerone position " + playerone);
-            position = rolldice();
-
-            // noplay condition
-
-            if(position == 0)
+            while( playerone <= 100)
             {
-                Console.WriteLine("no play");
-                playerone += position;
-            }
+                position = rolldice();
 
-            //  Snake bite condition
+                // noplay condition
 
-            if(playerone > 0 && position < 0)
-            {
-                Console.WriteLine("Snakebite");
-                playerone += position;
-                if(position < 0)
+                if (position == 0)
                 {
-                    playerone= 0;
+                    Console.WriteLine("no play");
+                    playerone += position;
                 }
+
+                //  Snake bite condition
+
+                if (playerone == 0 && position < 0)  
+                {
+                    Console.WriteLine("its a snake bite @ 0");
+                    playerone = 0; 
+                }
+
+                if (playerone > 0 && position < 0)
+                {
+                    Console.WriteLine("Snakebite");
+                    playerone += position;
+                    if (position < 0)
+                    {
+                        playerone = 0;
+                    }
+                }
+
+                // ladder condition
+
+                if (position > 0)
+                {
+                    Console.WriteLine("ladder");
+                    playerone += position;
+                }
+
+                Console.WriteLine(" after rolling player1 position " + playerone);
+
             }
-
-            // ladder condition
-
-            if(position > 0)
-            {
-                Console.WriteLine("ladder");
-                playerone += position;
-            }
-
-            Console.WriteLine(" after rolling player1 position " + playerone);
-
         }
 
         public int rolldice()
