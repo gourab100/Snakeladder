@@ -11,64 +11,96 @@ namespace SnakeLedder
         public void Start()
         {
             int position;
-            int playerone = 3;
-            Console.WriteLine("playerone position " + playerone);
-            while( playerone <= 100)
+            int playerOne = 3;    
+            int checkwin;
+            Console.WriteLine("player One position is " + playerOne);
+            while (playerOne <= 100)
             {
-                position = rolldice();
-
-                // noplay condition
-
+                
+                checkwin = CheckWin(playerOne);
+                if (checkwin == 1) 
+                {
+                    Console.WriteLine("playerOne wins!!");
+                    break; 
+                }
+                if (checkwin == 2) 
+                {
+                    position = 0;
+                }
+                else 
+                {
+                    position = RollDie();
+                }
+                // No play condition
                 if (position == 0)
                 {
-                    Console.WriteLine("no play");
-                    playerone += position;
+                    Console.WriteLine("its a no play");
+                    playerOne += position;
                 }
 
-                //  Snake bite condition
-
-                if (playerone == 0 && position < 0)  
+                //snake condition
+                if (playerOne == 0 && position < 0)  
                 {
                     Console.WriteLine("its a snake bite @ 0");
-                    playerone = 0; 
+                    playerOne = 0; 
                 }
-
-                if (playerone > 0 && position < 0)
+                if (playerOne > 0 && position < 0)
                 {
-                    Console.WriteLine("Snakebite");
-                    playerone += position;
-                    if (position < 0)
+                    Console.WriteLine("its a snake bite");
+                    playerOne += position; 
+                    if (playerOne < 0)
                     {
-                        playerone = 0;
+                        
+                        playerOne = 0;
                     }
                 }
 
-                // ladder condition
-
+                //ladder condition
                 if (position > 0)
                 {
-                    Console.WriteLine("ladder");
-                    playerone += position;
+                    Console.WriteLine("its a ladder"); 
+                    playerOne += position;
                 }
-
-                Console.WriteLine(" after rolling player1 position " + playerone);
-
+                if (playerOne > 100)
+                {
+                    playerOne -= position; 
+                }
+                Console.WriteLine($"player One rolls die and get position "+ playerOne);
             }
         }
 
-        public int rolldice()
+        public int CheckWin(int playerOne)
         {
-            Random random = new Random();
-
-            int dice = random.Next(1, 7);
-            Console.WriteLine("dice :" + dice);
-            int check = random.Next(1, 4);
-            if (check == 1)
-                return -dice; // snakebite;
-            if (check == 2)
-                return dice; // ladder
-            else
+            if (playerOne == 100) 
+                return 1;
+            if (playerOne > 100) 
+                return 2;
+            else 
                 return 0;
+        }
+
+
+        readonly Random random = new Random();
+        public int RollDie()
+        {
+            int dice, check;
+            dice = random.Next(1, 7);
+            Console.WriteLine("Dice = " +dice);
+            check = CheckPlay();
+            
+            if (check == 1)
+                return -dice; 
+            if (check == 2)
+                return dice; 
+            else
+                return 0; 
+        }
+
+        public int CheckPlay()
+        {
+            
+            int check = random.Next(1, 4);
+            return check;
         }
 
     }
