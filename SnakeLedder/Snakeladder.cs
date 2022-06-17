@@ -10,11 +10,40 @@ namespace SnakeLedder
     {
         public void Start()
         {
-            int position = 0;
+            int position;
             int playerone;
-            playerone = position;
+            playerone = 3;
             Console.WriteLine("playerone position " + playerone);
-            playerone = rolldice();
+            position = rolldice();
+
+            // noplay condition
+
+            if(position == 0)
+            {
+                Console.WriteLine("no play");
+                playerone += position;
+            }
+
+            //  Snake bite condition
+
+            if(playerone > 0 && position < 0)
+            {
+                Console.WriteLine("Snakebite");
+                playerone += position;
+                if(position < 0)
+                {
+                    playerone= 0;
+                }
+            }
+
+            // ladder condition
+
+            if(position > 0)
+            {
+                Console.WriteLine("ladder");
+                playerone += position;
+            }
+
             Console.WriteLine(" after rolling player1 position " + playerone);
 
         }
@@ -22,8 +51,16 @@ namespace SnakeLedder
         public int rolldice()
         {
             Random random = new Random();
+
             int dice = random.Next(1, 7);
-            return dice;
+            Console.WriteLine("dice :" + dice);
+            int check = random.Next(1, 4);
+            if (check == 1)
+                return -dice; // snakebite;
+            if (check == 2)
+                return dice; // ladder
+            else
+                return 0;
         }
 
     }
