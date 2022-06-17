@@ -29,7 +29,7 @@ namespace SnakeLedder
                 }
                 else 
                 {
-                    position = RollDie();
+                    position = RollDiec();
                 }
                 // No play condition
                 if (position == 0)
@@ -80,11 +80,14 @@ namespace SnakeLedder
         }
 
 
-        readonly Random random = new Random();
-        public int RollDie()
+         Random random = new Random();
+        int countdice = 0;
+        public int RollDiec()
         {
             int dice, check;
             dice = random.Next(1, 7);
+            countdice++;
+            Console.WriteLine("number " + countdice);
             Console.WriteLine("Dice = " +dice);
             check = CheckPlay();
             
@@ -102,6 +105,7 @@ namespace SnakeLedder
             int check = random.Next(1, 4);
             return check;
         }
+        
 
     }
 }
